@@ -2,11 +2,12 @@ import sys
 import csv
 
 def main():
-    if len(sys.argv) < 2:
-        print("USAGE: get_2016_election_data.py <DataFile> <OutputFile>")
+    if len(sys.argv) < 3:
+        print("USAGE: get_2016_election_data.py <DataFile> <OutputFile> <State>")
     else:
         dataFile = sys.argv[1]
         outputFile = sys.argv[2]
+        state = sys.argv[3]
 
         state_index = 0
         county_index = 0
@@ -79,7 +80,7 @@ def main():
             writer = csv.writer(outfile, delimiter=',')
             writer.writerow(csv_header)
             for county in outputList:
-                if county[0] == "North Carolina":
+                if county[0] == state.replace("_", " "):
                     writer.writerow(county)
 
         outfile.close()
