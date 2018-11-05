@@ -1,1 +1,4 @@
-
+Requirement already satisfied: dj-database-url in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (0.5.0)
+Requirement already satisfied: pip in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (18.1)
+Requirement already satisfied: freeze in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (1.0.10)
+Requirement already satisfied: six in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from freeze) (1.11.0)
