@@ -1,0 +1,22 @@
+{
+  "name": "Mock Convention Database",
+  "description": "Database for Mock Convention",
+  "image": "heroku/python",
+  "repository": "https://github.com/LI0131/MockConvention2020",
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql" ],
+  "env": {
+    "SECRET_KEY": {
+      "description": "The secret key for the Django application.",
+      "generator": "secret"
+    }
+  },
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "python manage.py collectstatic --noinput",
+        "test": "python manage.py test"
+      }
+    }
+  }
+}
