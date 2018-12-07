@@ -8,7 +8,7 @@
  CREATE TABLE REGION(
    regionID INT NOT NULL,
    regionName VARCHAR(20) NOT NULL,
-   PRIMARY KEY (regionID),
+   PRIMARY KEY (regionID)
  );
 
 
@@ -17,7 +17,7 @@
    regionID INT NOT NULL,
    stateName VARCHAR(20) NOT NULL,
    PRIMARY KEY (stateID),
-   REFERENCES REGION(regionID),
+   FOREIGN KEY (stateID) REFERENCES REGION(regionID)
  );
 
 
@@ -31,7 +31,7 @@
    lastElectionParty VARCHAR(20) NOT NULL,
    lastElectionCandidate VARCHAR(20) NOT NULL,
    PRIMARY KEY (countyID),
-   REFERENCES STATE(stateID),
+   FOREIGN KEY (countyID) REFERENCES STATE(stateID)
  );
 
 
@@ -40,5 +40,5 @@
    countyID INT NOT NULL,
    precinctName VARCHAR(20) NOT NULL,
    PRIMARY KEY (precinctID),
-   REFERENCES COUNTY(countyID),
+   FOREIGN KEY (precinctID)  REFERENCES COUNTY(countyID)
  );
